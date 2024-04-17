@@ -1,0 +1,208 @@
+{% extends 'base.html' %} {% load static %} {% block content %} {% comment %}
+Карусель
+<div class="carousel">
+	<div class="carousel-inner">
+		<div class="carousel-item">
+			<img src="{% static '1.jpg' %}" alt="Image 1" />
+		</div>
+		<div class="carousel-item">
+			<img src="{% static '2.jpg' %}" alt="Image 2" />
+		</div>
+		<div class="carousel-item">
+			<img src="{% static '3.jpg' %}" alt="Image 3" />
+		</div>
+		<div class="carousel-item">
+			<img src="{% static '4.jpg' %}" alt="Image 3" />
+		</div>
+		<div class="carousel-item">
+			<img src="{% static '5.jpg' %}" alt="Image 3" />
+		</div>
+		<div class="carousel-item">
+			<img src="{% static '6.jpg' %}" alt="Image 3" />
+		</div>
+	</div>
+	<button class="prev-btn">&#10094;</button>
+	<button class="next-btn">&#10095;</button>
+</div>
+{% endcomment %}
+
+<div class="mainText">
+	<div class="padText">
+		<div class="textContent1 color">
+			MentorWave - платформа, <br />где вы можете найти своего идеального
+			ментора!
+		</div>
+		<div class="textContent2 color">
+			Не откладывайте свое развитие на потом. Встряхните волны вашего потенциала
+			с MentorWave - вашим надежным партнером на пути к успеху.
+		</div>
+		<div class="textContent3 color">
+			Присоединяйтесь к нам сегодня и начните свой увлекательный путь поиска
+			ментора!
+		</div>
+	</div>
+</div>
+
+<div class="mainButton">
+	<a href="#lists" class="styleButton">Поиск ментора</a>
+</div>
+
+<div class="howItWork">
+	<div class="mainTextWork">Как это работает?</div>
+	<div class="secondText">
+		<div class="work">
+			👆Выбери ментора
+			<span class="lowText">
+				Все менторы, с которыми мы сотрудничаем, проходят нашу проверку: мы
+				бережно отбираем только настоящих экспертов, чтобы избежать обмана.
+			</span>
+		</div>
+		<div class="work">
+			📞Свяжись с ним
+			<span class="lowText">
+				Оставь заявку на сайте. Напиши, с чем тебе нужна помощь и что бы ты
+				хотел получить. Помни: хорошо сформулированная проблема — наполовину
+				решённая проблема. Чем подробнее опишешь, тем лучше.
+			</span>
+		</div>
+		<div class="work">
+			🧠Дело за вами
+			<span class="lowText">
+				Мы перешлём твою заявку ментору. Он оценит задачу и свяжется с тобой,
+				чтобы обсудить детали и выбрать время. Каждый ментор сам определяет
+				стоимость и длительность сессии.
+			</span>
+		</div>
+	</div>
+</div>
+
+<div class="mentorText" id="lists">Все наши менторы</div>
+<div class="searchAnketa">
+	<input
+		id="searchInput"
+		class="inputSearch"
+		type="search"
+		placeholder="🔎Поиск"
+	/>
+</div>
+<div class="grid-container">
+	<a href="{% url '1' %}" class="grid-item">
+		<div class="anketa">
+			<img src="{% static 'mask.jpg' %}" alt="Image 1" class="anketaImg" />
+			<div class="anketaName">Илон Маск</div>
+			<div class="anketaTheme">Ракетостроение</div>
+			<div class="anketaDescription">Гений, милиардер, филантроп</div>
+		</div>
+	</a>
+	<a href="{% url '2' %}" class="grid-item">
+		<div class="anketa">
+			<img src="{% static 'toretto.jpg' %}" alt="Image 1" class="anketaImg" />
+			<div class="anketaName">Доминик Торетто</div>
+			<div class="anketaTheme">Семейные ценности, езда за рулём</div>
+			<div class="anketaDescription">Гонщик, семьянин</div>
+		</div>
+	</a>
+	<a href="{% url '3' %}" class="grid-item">
+		<div class="anketa">
+			<img src="{% static 'besos.jpg' %}" alt="Image 1" class="anketaImg" />
+			<div class="anketaName">Джеф Безос</div>
+			<div class="anketaTheme">Бизнес</div>
+			<div class="anketaDescription">Милиардер, бизнесмен</div>
+		</div>
+	</a>
+	<a href="{% url '4' %}" class="grid-item">
+		<div class="anketa">
+			<img src="{% static 'bill.jpg' %}" alt="Image 1" class="anketaImg" />
+			<div class="anketaName">Билл Гейтс</div>
+			<div class="anketaTheme">IT, бизнес</div>
+			<div class="anketaDescription">Создатель Windows</div>
+		</div>
+	</a>
+	<a href="{% url '5' %}" class="grid-item">
+		<div class="anketa">
+			<img src="{% static 'mark.jpg' %}" alt="Image 2" class="anketaImg" />
+			<div class="anketaName">Марк Цукерберг</div>
+			<div class="anketaTheme">Социальные медиа, технологии</div>
+			<div class="anketaDescription">Сооснователь Facebook</div>
+		</div>
+	</a>
+	<a href="{% url '6' %}" class="grid-item">
+		<div class="anketa">
+			<img src="{% static 'oprah.jpg' %}" alt="Image 3" class="anketaImg" />
+			<div class="anketaName">Опра Уинфри</div>
+			<div class="anketaTheme">Телекоммуникации, благотворительность</div>
+			<div class="anketaDescription">Телеведущая, продюсер</div>
+		</div>
+	</a>
+	<a href="{% url '7' %}" class="grid-item">
+		<div class="anketa">
+			<img src="{% static 'obama.jpg' %}" alt="Image 7" class="anketaImg" />
+			<div class="anketaName">Барак Обама</div>
+			<div class="anketaTheme">Политика, лидерство</div>
+			<div class="anketaDescription">44-й президент США</div>
+		</div>
+	</a>
+	<a href="{% url '8' %}" class="grid-item">
+		<div class="anketa">
+			<img src="{% static 'einstein.jpg' %}" alt="Image 2" class="anketaImg" />
+			<div class="anketaName">Альберт Эйнштейн</div>
+			<div class="anketaTheme">Физика, теория относительности</div>
+			<div class="anketaDescription">Нобелевский лауреат</div>
+		</div>
+	</a>
+	<a href="{% url '9' %}" class="grid-item">
+		<div class="anketa">
+			<img src="{% static 'chanel.jpg' %}" alt="Image 3" class="anketaImg" />
+			<div class="anketaName">Коко Шанель</div>
+			<div class="anketaTheme">Мода, дизайн</div>
+			<div class="anketaDescription">Легендарная дизайнерка</div>
+		</div>
+	</a>
+	<a href="{% url '10' %}" class="grid-item">
+		<div class="anketa">
+			<img src="{% static 'mandela.jpg' %}" alt="Image 4" class="anketaImg" />
+			<div class="anketaName">Нельсон Мандела</div>
+			<div class="anketaTheme">Правозащитник, политика</div>
+			<div class="anketaDescription">Бывший президент Южной Африки</div>
+		</div>
+	</a>
+</div>
+
+<div class="FAQText">FAQ</div>
+<div class="FAQ">
+	<div class="FAQSection">
+		<div class="mainTextFAQ">❗Зачем всё это?</div>
+		<div class="secondTextFAQ">
+			Мы замечаем огромную потребность у современных специалистов в наставниках,
+			которые помогали бы им преодолевать трудности и передавали бы тонкости и
+			секреты своих знаний. Наш сервис является попыткой создать сообщество
+			наставников и учеников, чтобы облегчить им процесс взаимного поиска и
+			взаимодействия.
+		</div>
+	</div>
+	<div class="FAQSection">
+		<div class="mainTextFAQ">💵 Сколько это стоит?</div>
+		<div class="secondTextFAQ">
+			Мы хотим построить сообщество, поэтому не хотим приплетать в процесс
+			деньги. Однако мы понимаем, что время эксперта может чего-то стоить.
+			Поэтому у нас каждый ментор сам назначает стоимость своей консультации,
+			которую мы затем показываем на карточке. Эта цена носит рекомендательный
+			характер и всегда обсуждается с экспертом напрямую.
+		</div>
+	</div>
+	<div class="FAQSection">
+		<div class="mainTextFAQ">📃Я записался к ментору. Что теперь?</div>
+		<div class="secondTextFAQ">
+			Отлично! Сразу после того, как ты оставил заявку на менторство, мы
+			передаём её выбранному эксперту. Он или она рассмотрят её в течение пары
+			дней. Если ментор решит, что готов помочь по этой заявке, то он сам
+			свяжется с тобой для выбора времени и способа встречи. Однако может
+			случиться такое, что ментор решит отказаться от заявки. Это не значит, что
+			ты сделал что-то не так, просто у ментора может не быть времени или
+			необходимой экспертизы. В этом случае мы обязательно оповестим тебя об
+			отказе, чтобы ты мог найти себе другого специалиста.
+		</div>
+	</div>
+</div>
+
+{% endblock %}

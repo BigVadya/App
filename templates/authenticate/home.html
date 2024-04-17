@@ -1,0 +1,95 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+	<div class="page-container">
+		<h1 class="page-title text-center">Мой профиль</h1>
+
+		{% if user.is_authenticated %}
+
+		<div class="col-md-4">
+			<img src="{{ user.profile.image.url }}" class="profile-image" />
+			<p class="profile-name">
+				Имя: {{ user.first_name }} {{ user.last_name }}
+			</p>
+			<p class="profile-username">Логин: {{ user.username}}</p>
+			<p class="profile-email">Почта: {{ user.email }}</p>
+			<p>Заявка находится на рассмотрение🔴</p>
+			<div class="butt">
+				<a href="{% url 'edit_profile' %}" class="btn btn-secondary"
+					>Изменить профиль</a
+				>
+				<a href="{% url 'change_password' %}" class="btn btn-secondary"
+					>Изменить пароль</a
+				>
+			</div>
+		</div>
+
+		{% else %}
+		<p class="lead text-center">
+			Please <a href="{% url 'login' %}">Войдите</a> чтобы увидеть свой профиль.
+		</p>
+		{% endif %}
+	</div>
+
+	<style>
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		h2 {
+			font-size: 24px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		form p {
+			margin-bottom: 20px;
+		}
+
+		.form-control {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		.butt {
+			display: flex;
+		}
+		.btn {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			background-color: #0b90c4;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			align-items: center;
+			margin: 5px;
+		}
+
+		.btn:hover {
+			background-color: #0875a0;
+		}
+
+		.helptext {
+			display: block;
+			margin-top: 5px;
+			color: #6c757d;
+		}
+
+		.text-muted {
+			color: #6c757d;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+		.small {
+			font-size: 80%;
+		}
+	</style>
+</div>
+{% endblock %}
