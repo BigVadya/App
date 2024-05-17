@@ -587,19 +587,6 @@ footer {
 	height: 32px;
 }
 
-.buttonConnectClick {
-	display: inline-block;
-	padding: 10px 20px;
-	background-color: #ff6a3d;
-	color: white;
-	text-align: center;
-	font-size: 16px;
-	font-weight: bold;
-	border-radius: 5px;
-	border: none;
-	cursor: pointer;
-}
-
 .popup {
 	position: fixed;
 	top: 50%;
